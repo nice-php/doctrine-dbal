@@ -1,4 +1,7 @@
 doctrine-dbal
 =============
 
-Integrates Nice with Doctrine DBAL
+Integrates Nice applications with Doctrine DBAL.
+
+[View the full documentation online](http://niceframework.com/nice/latest/extensions/doctrine-dbal).
+
