@@ -18,7 +18,7 @@ class DoctrineDbalConfigurationTest extends \PHPUnit_Framework_TestCase
     {
         $this->setExpectedException(
             'Symfony\Component\Config\Definition\Exception\InvalidConfigurationException',
-            'The child node "database" at path "doctrine" must be configured.'
+            'The child node "database" at path "doctrine_dbal" must be configured.'
         );
 
         $processor = new Processor();
@@ -28,7 +28,7 @@ class DoctrineDbalConfigurationTest extends \PHPUnit_Framework_TestCase
     public function testDefaultDatabaseConfig()
     {
         $processor = new Processor();
-        $config = $processor->processConfiguration(new DoctrineDbalConfiguration(), array('doctrine' => array('database' => array('driver' => 'pdo_mysql'))));
+        $config = $processor->processConfiguration(new DoctrineDbalConfiguration(), array('doctrine_dbal' => array('database' => array('driver' => 'pdo_mysql'))));
 
         $this->assertEquals(
             array('database' => array('driver' => 'pdo_mysql')),
